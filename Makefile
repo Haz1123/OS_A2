@@ -1,24 +1,16 @@
-
-##
- # startup code provided by Paul Miller for COSC1114 - Operating Systems
- # Principles
- ##
-
-# provide make targets here to build the two programs 
-
 all: clear_executable fifo sjf rr clean
 
 *.o: *.cpp
-	g++ -Wall -Werror -std=c++2a -pedantic -g -c *.cpp
+	g++ -Wall -Werror -std=c++20 -pedantic -g -c *.cpp
 
 fifo:
-	g++ -Wall -Werror -std=c++2a -pedantic -g -o ./fifo ./src/drivers/fifo_main.cpp ./src/common/*.cpp
+	g++ -Wall -Werror -std=c++20 -pedantic -g -o ./fifo ./src/drivers/fifo_main.cpp ./src/common/*.cpp
 
 sjf:
-	g++ -Wall -Werror -std=c++2a -pedantic -g -o ./sjf ./src/drivers/sjf_main.cpp ./src/common/*.cpp
+	g++ -Wall -Werror -std=c++20 -pedantic -g -o ./sjf ./src/drivers/sjf_main.cpp ./src/common/*.cpp
 
 rr:
-	g++ -Wall -Werror -std=c++2a -pedantic -g -o ./rr ./src/drivers/rr_main.cpp ./src/common/*.cpp
+	g++ -Wall -Werror -std=c++20 -pedantic -g -o ./rr ./src/drivers/rr_main.cpp ./src/common/*.cpp
 
 
 clean:
